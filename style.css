@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.397);
+}
+
+.nav-left img {
+  width: 200px;
+  height: 76px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 15px;
+}
+
+.flex2 {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.flex2 a {
+  color: black;
+  text-decoration: none;
+  font-size: 19px;
+  cursor: pointer;
+}
+
+.a6 {
+  border: 2px solid rgb(255, 187, 0);
+  border-radius: 24px;
+  padding: 15px 20px;
+  margin-left: 30px;
+  font-weight: bolder;
+}
+
+.special {
+  position: relative;
+}
+
+.special p {
+  display: none;
+  background-color: white;
+  padding: 20px;
+  width: 200px;
+  position: absolute;
+  top: 30px;
+  box-shadow: 8px 8px 3px 2px rgba(245, 222, 179, 0.356);
+  z-index: 1;
+}
+
+.special:hover p {
+  display: block;
+}
+
+.hambuger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  display: none;
+  cursor: pointer;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.hambuger div {
+  height: 2px;
+  width: 17px;
+  background-color: black;
+  transition: all 0.5s ease;
+}
+
+button {
+  display: none;
+}
+
+.closeBtn {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .nav-right .a6 {
+    display: none;
+  }
+
+  .flex {
+    padding: 18px 0px;
+  }
+
+  .flex2 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-contents {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+    position: relative;
+  }
+
+  .hambuger {
+    display: flex;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+  }
+
+  nav .nav-right {
+    display: none;
+  }
+
+  .nav-right a {
+    color: rgb(75, 73, 73);
+    font-size: 17px;
+  }
+
+  nav .nav-right.active {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    padding-top: 100px;
+    padding-left: 80px;
+  }
+
+  .nav-right {
+    position: relative;
+  }
+
+  .closeBtn {
+    display: block;
+    position: absolute;
+    left: 15px;
+    bottom: 570px;
+    font-size: 23px;
+    color: black;
+    cursor: pointer;
+  }
+
+  .special:hover p {
+    display: none;
+  }
+
+  .special {
+    position: relative;
+  }
+
+  .bi-caret-down-fill {
+    position: absolute;
+    left: 120px;
+  }
+
+  .show {
+    transition: transform 0.2s ease-in;
+    transform: rotate(180deg);
+  }
+
+  .special p.active {
+    display: block;
+  }
+}
