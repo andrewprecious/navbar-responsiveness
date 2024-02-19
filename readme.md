@@ -1,1 +1,3 @@
-# This is my second fcmb website
+# This is a responsive navbar
+
+## I added the functionality using javascript
